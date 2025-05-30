@@ -1,0 +1,24 @@
+{
+    "bind_key": "l",
+    "fishing_active": true,
+    "splash_color_range": [
+        [
+            90,
+            150,
+            50
+        ],
+        [
+            120,
+            255,
+            255
+        ]
+    ],
+    "circle_params": {
+        "dp": 1,
+        "minDist": 100,
+        "param1": 50,
+        "param2": 30,
+        "minRadius": 10,
+        "maxRadius": 100
+    }
+}
