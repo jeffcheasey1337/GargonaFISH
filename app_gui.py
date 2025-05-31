@@ -4,7 +4,7 @@ import threading
 import logging
 from config_service import load_config, update_bind_key, update_pause_key, update_speed, set_fishing_active, update_exit_key
 from fishing_service import FishingManager
-
+from tkinter import simpledialog
 logger = logging.getLogger("GUI")
 
 
@@ -36,7 +36,7 @@ class FishingApp:
         )
         self.start_btn.pack(side=tk.LEFT, padx=5)
 
-        # 🧹 Удалено: self.stop_btn
+        # 🧹 Удалена кнопка остановки
 
         settings_frame = ttk.LabelFrame(main_frame, text="Settings", padding=10)
         settings_frame.pack(fill=tk.X, pady=5)
@@ -116,6 +116,27 @@ class FishingApp:
             self.status_var.set("Status: Ready")
 
     def start_fishing(self):
+        # Запрос выбора режима движения
+        choice = messagebox.askquestion(
+            "Выбор движения",
+            "Двигаться к ближайшему всплеску? (Если 'Нет', будет движение в направлении)"
+        )
+        if choice == 'yes':
+            # Двигаться к всплеску
+            self.fishing_manager.set_move_mode('splash')
+        else:
+            # Запрос направления
+            direction = simpledialog.askstring(
+                "Выбор направления",
+                "Введите направление движения: 'left' или 'right'"
+            )
+            if direction and direction.lower() in ('left', 'right'):
+                self.fishing_manager.set_move_mode(direction.lower())
+            else:
+                messagebox.showerror("Ошибка", "Неверное направление, запускаю по всплескам")
+                self.fishing_manager.set_move_mode('splash')
+
+        # Далее запускаем поток рыбалки
         def fishing_thread():
             try:
                 set_fishing_active(True)
@@ -130,7 +151,6 @@ class FishingApp:
         else:
             logger.warning("Fishing already running")
             messagebox.showwarning("Warning", "Fishing is already running")
-
     def save_key(self):
         key = self.key_var.get().strip().lower()
         if key and len(key) == 1:

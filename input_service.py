@@ -4,47 +4,61 @@ import time
 import logging
 import random
 import pyautogui
-import ctypes
+import pydirectinput
+import math
 
 logger = logging.getLogger("InputService")
+
 
 def press_key(key):
     pyautogui.press(key)
     logger.debug(f"Pressed key: {key}")
     return True
 
+
 def mouse_down_right():
-    pyautogui.mouseDown(button='right')
+    pydirectinput.mouseDown(button='right')
     logger.debug("Right mouse button down")
 
+
 def mouse_up_right():
-    pyautogui.mouseUp(button='right')
+    pydirectinput.mouseUp(button='right')
     logger.debug("Right mouse button up")
 
-# Используем WinAPI для низкоуровневого движения мыши
-SendInput = ctypes.windll.user32.SendInput
-
-class MouseInput(ctypes.Structure):
-    _fields_ = [("dx", ctypes.c_long),
-                ("dy", ctypes.c_long),
-                ("mouseData", ctypes.c_ulong),
-                ("dwFlags", ctypes.c_ulong),
-                ("time", ctypes.c_ulong),
-                ("dwExtraInfo", ctypes.POINTER(ctypes.c_ulong))]
-
-class Input_I(ctypes.Union):
-    _fields_ = [("mi", MouseInput)]
-
-class Input(ctypes.Structure):
-    _fields_ = [("type", ctypes.c_ulong),
-                ("ii", Input_I)]
-
-INPUT_MOUSE = 0
-MOUSEEVENTF_MOVE = 0x0001
 
 def move_mouse_relative(dx, dy):
-    mi = MouseInput(dx=dx, dy=dy, mouseData=0, dwFlags=MOUSEEVENTF_MOVE,
-                    time=0, dwExtraInfo=ctypes.pointer(ctypes.c_ulong(0)))
-    input_struct = Input(type=INPUT_MOUSE, ii=Input_I(mi=mi))
-    SendInput(1, ctypes.pointer(input_struct), ctypes.sizeof(input_struct))
+    """
+    Используем pydirectinput для относительного движения мыши.
+    """
+    pydirectinput.moveRel(dx, dy)
     logger.debug(f"Mouse moved relative: dx={dx}, dy={dy}")
+
+
+def move_towards(target, max_step=25):
+    """
+    Двигает курсор к указанной точке target (x, y), пошагово, используя move_mouse_relative.
+    Возвращает True, если достигнута цель.
+    """
+    current_x, current_y = pyautogui.position()
+    target_x, target_y = target
+    dx = target_x - current_x
+    dy = target_y - current_y
+    distance = math.hypot(dx, dy)
+
+    if distance < 1:
+        logger.debug("Cursor already at target.")
+        return True
+
+    scale = min(max_step / distance, 1.0)
+    step_dx = int(dx * scale)
+    step_dy = int(dy * scale)
+
+    if step_dx == 0 and dx != 0:
+        step_dx = 1 if dx > 0 else -1
+    if step_dy == 0 and dy != 0:
+        step_dy = 1 if dy > 0 else -1
+
+    move_mouse_relative(step_dx, step_dy)
+    logger.debug(f"Moving towards: {target}, step=({step_dx}, {step_dy})")
+
+    return False
