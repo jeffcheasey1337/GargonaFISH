@@ -20,5 +20,7 @@
         "param2": 30,
         "minRadius": 10,
         "maxRadius": 100
-    }
+    },
+    "speed": 10,
+    "pause_key": "p"
 }

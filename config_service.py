@@ -1,4 +1,3 @@
-# config_service.py
 import json
 import os
 import logging
@@ -8,7 +7,9 @@ CONFIG_FILE = "fishing_config.json"
 
 DEFAULT_CONFIG = {
     "bind_key": "e",
+    "pause_key": "p",  # Добавлено
     "fishing_active": False,
+    "speed": 5,
     "splash_color_range": [[90, 150, 50], [120, 255, 255]],
     "circle_params": {"dp": 1, "minDist": 100, "param1": 50, "param2": 30, "minRadius": 10, "maxRadius": 100}
 }
@@ -43,21 +44,23 @@ def save_config(config):
 
 def update_bind_key(new_key):
     config = load_config()
-    if new_key == config.get('bind_key'):
-        logger.warning("Same key provided, no changes made")
-        return True  # Возвращаем True, так как это не ошибка
-
     config['bind_key'] = new_key
-    if save_config(config):
-        logger.info(f"Key updated to '{new_key}'")
-        return True
-    return False
+    return save_config(config)
+
+
+def update_pause_key(new_key):
+    config = load_config()
+    config['pause_key'] = new_key
+    return save_config(config)
+
+
+def update_speed(new_speed):
+    config = load_config()
+    config['speed'] = new_speed
+    return save_config(config)
 
 
 def set_fishing_active(state):
     config = load_config()
-    if config.get('fishing_active') == state:
-        return True
-
     config['fishing_active'] = state
     return save_config(config)
