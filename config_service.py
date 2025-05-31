@@ -10,6 +10,7 @@ DEFAULT_CONFIG = {
     "pause_key": "p",  # Добавлено
     "fishing_active": False,
     "speed": 5,
+    "exit_key": "q",  # Клавиша для экстренного выхода
     "splash_color_range": [[90, 150, 50], [120, 255, 255]],
     "circle_params": {"dp": 1, "minDist": 100, "param1": 50, "param2": 30, "minRadius": 10, "maxRadius": 100}
 }
@@ -63,4 +64,8 @@ def update_speed(new_speed):
 def set_fishing_active(state):
     config = load_config()
     config['fishing_active'] = state
+    return save_config(config)
+def update_exit_key(new_key):
+    config = load_config()
+    config['exit_key'] = new_key
     return save_config(config)

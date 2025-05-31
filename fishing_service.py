@@ -55,6 +55,8 @@ class FishingManager:
         self.paused = False
         self.config = load_config()
         pause_key = self.config.get("pause_key", "p")
+        exit_key = self.config.get("exit_key", "q")
+        keyboard.on_press_key(exit_key, lambda _: self.force_exit())
 
         logger.info("Starting fishing sequence")
         keyboard.on_press_key(pause_key, lambda _: self.toggle_pause())
@@ -99,3 +101,9 @@ class FishingManager:
     def stop_fishing(self):
         self.running = False
         logger.info("Fishing manually stopped")
+
+    def force_exit(self):
+        logger.warning("Emergency exit triggered!")
+        self.stop_fishing()
+        import os
+        os._exit(0)

@@ -22,5 +22,6 @@
         "maxRadius": 100
     },
     "speed": 10,
-    "pause_key": "p"
+    "pause_key": "p",
+    "exit_key": "q"
 }

@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
 import threading
 import logging
-from config_service import load_config, update_bind_key, update_pause_key, update_speed, set_fishing_active
+from config_service import load_config, update_bind_key, update_pause_key, update_speed, set_fishing_active, update_exit_key
 from fishing_service import FishingManager
 
 logger = logging.getLogger("GUI")
@@ -56,6 +56,13 @@ class FishingApp:
         self.pause_btn = ttk.Button(settings_frame, text="Save Pause", command=self.save_pause_key, width=10)
         self.pause_btn.grid(row=1, column=2, padx=5, pady=(10, 0))
 
+        ttk.Label(settings_frame, text="Exit Key:").grid(row=3, column=0, sticky=tk.W, pady=(10, 0))
+        self.exit_var = tk.StringVar()
+        self.exit_entry = ttk.Entry(settings_frame, textvariable=self.exit_var, width=5)
+        self.exit_entry.grid(row=3, column=1, padx=5, pady=(10, 0))
+        self.exit_btn = ttk.Button(settings_frame, text="Save Exit", command=self.save_exit_key, width=10)
+        self.exit_btn.grid(row=3, column=2, padx=5, pady=(10, 0))
+
         ttk.Label(settings_frame, text="Speed:").grid(row=2, column=0, sticky=tk.W, pady=(10, 0))
         self.speed_var = tk.IntVar(value=5)
         self.speed_scale = ttk.Scale(settings_frame, from_=1, to=10, orient=tk.HORIZONTAL,
@@ -99,6 +106,7 @@ class FishingApp:
         self.key_var.set(config.get('bind_key', 'e'))
         self.pause_var.set(config.get('pause_key', 'p'))
         self.speed_var.set(config.get('speed', 5))
+        self.exit_var.set(config.get('exit_key', 'q'))
 
         if self.fishing_manager.running:
             self.start_btn.config(state=tk.DISABLED)
@@ -142,6 +150,14 @@ class FishingApp:
     def save_speed(self):
         update_speed(self.speed_var.get())
         logger.info(f"Speed updated: {self.speed_var.get()}")
+
+    def save_exit_key(self):
+        key = self.exit_var.get().strip().lower()
+        if key and len(key) == 1:
+            update_exit_key(key)
+            logger.info(f"Exit key updated: {key}")
+        else:
+            messagebox.showerror("Error", "Invalid exit key")
 
 
 if __name__ == "__main__":
