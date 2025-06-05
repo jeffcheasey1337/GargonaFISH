@@ -4,19 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7daf45d6-2bc1-4d21-84d8-0fd41c366e69" name="Changes" comment="nachalo">
+    <list default="true" id="7daf45d6-2bc1-4d21-84d8-0fd41c366e69" name="Changes" comment="mb rabotaet cvet">
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/train_xml/krug9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/annotations/val_xml/krug34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/train/krug9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai dev/images/val/krug34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/keybinds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/fishing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/movement.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/template_matching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config_reader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/circle_game.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/circle_nav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fishing_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/fishing_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,27 +101,40 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.app_gui.executor": "Run",
+    "Python.coords.executor": "Run",
     "Python.coordskrug.executor": "Run",
+    "Python.dataset_collector.executor": "Run",
     "Python.fishing_starter.executor": "Run",
+    "Python.generate_tfrecord.executor": "Run",
+    "Python.glavnoe.executor": "Run",
     "Python.input_service.executor": "Run",
     "Python.interface.executor": "Run",
     "Python.main.executor": "Run",
     "Python.main_controller.executor": "Run",
+    "Python.mouse_emulation.executor": "Run",
     "Python.splash_hsv_detector.executor": "Run",
+    "Python.xml_to_csv.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Ilya/PycharmProjects/GargonaFish/ai dev/annotations/val_xml",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish\ai dev\annotations\val_xml" />
+      <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish\ai dev\annotations\train_xml" />
+      <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish\ai dev\images\val" />
+      <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish\ai dev\images\train" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish" />
       <recent name="C:\Users\Ilya\PycharmProjects\GargonaFish\services" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="glavnoe" type="PythonConfigurationType" factoryName="Python">
       <module name="GargonaFish" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,7 +147,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilya\PycharmProjects\GargonaFish\main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_gui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,6 +172,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="nachalo" />
-    <option name="LAST_COMMIT_MESSAGE" value="nachalo" />
+    <MESSAGE value="pkm+zakid+vedet" />
+    <MESSAGE value="dobavlena pauza" />
+    <MESSAGE value="dobavlen force exit" />
+    <MESSAGE value="mb rabotaet cvet" />
+    <option name="LAST_COMMIT_MESSAGE" value="mb rabotaet cvet" />
   </component>
 </project>

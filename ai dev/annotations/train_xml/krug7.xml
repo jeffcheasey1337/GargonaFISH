@@ -1,0 +1,26 @@
+<annotation>
+	<folder>forbor</folder>
+	<filename>krug7.png</filename>
+	<path>C:\Users\Ilya\Downloads\forbor\krug7.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>circle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>920</xmin>
+			<ymin>268</ymin>
+			<xmax>958</xmax>
+			<ymax>304</ymax>
+		</bndbox>
+	</object>
+</annotation>

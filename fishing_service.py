@@ -143,7 +143,7 @@ class FishingManager:
 
         w, h = template.shape[1], template.shape[0]
         res = cv2.matchTemplate(screenshot_gray, template, cv2.TM_CCOEFF_NORMED)
-        threshold = 0.8
+        threshold = 0.75
         loc = np.where(res >= threshold)
 
         points = []
